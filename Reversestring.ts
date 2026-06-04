@@ -1,6 +1,6 @@
-function reversestring(name:string):string {
+function reversestring(names:string):string {
 
-    return name.split('').reverse().join('');
+    return names.split('').reverse().join('');
 }
 
-console.log("Hello");
+console.log(reversestring("Hello"));
