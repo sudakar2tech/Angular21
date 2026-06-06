@@ -4,3 +4,4 @@ function reversestring(names:string):string {
 }
 
 console.log(reversestring("Hello"));
+

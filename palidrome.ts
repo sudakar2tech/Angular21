@@ -8,5 +8,3 @@ function checkPalindrome(str: string): boolean {
     // 3. Compare the original cleaned string with the reversed string
     return cleanedString === reversedString;
   }
-
- 

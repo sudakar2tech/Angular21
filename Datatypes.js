@@ -1,4 +1,4 @@
-"use strict";
+
 function strname(name, department) {
     if (department = 'IT')
         return 'My name is ' + name + ' department is ' + department;

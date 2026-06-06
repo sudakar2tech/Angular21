@@ -1,5 +1,6 @@
-"use strict";
-function reversestring(name) {
-    return name.split('').reverse().join('');
+
+function reversestring(names) {
+    return names.split('').reverse().join('');
 }
 console.log(reversestring("Hello"));
+
