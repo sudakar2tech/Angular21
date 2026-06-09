@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+    
+</head>
+<body>
+    <div class="upload-container">
+  <h2>Angular File Upload Example</h2>
+
+  <!-- File Input Selection Field -->
+  <div class="form-group">
+    <input type="file" (change)="onFileSelected($event)" accept=".jpg,.jpeg,.png,.pdf" />
+  </div>
+
+  <!-- Selection Metadata Display -->
+  <div *ngIf="selectedFile" class="file-details">
+    <p><strong>File Name:</strong> {{ selectedFile.name }}</p>
+    <p><strong>Size:</strong> {{ (selectedFile.size / 1024).toFixed(2) }} KB</p>
+  </div>
+
+  <!-- Dynamic Progress Bar Indicator -->
+  <div *ngIf="isUploading" class="progress-container">
+    <div class="progress-bar" [style.width.%]="uploadProgress">
+      {{ uploadProgress }}%
+    </div>
+  </div>
+
+  <!-- Form Submission Execution Button -->
+  <button [disabled]="!selectedFile || isUploading" (click)="onUpload()" class="btn-upload">
+    {{ isUploading ? 'Uploading...' : 'Upload File' }}
+  </button>
+
+  <!-- Error or Success Alert Banner Messages -->
+  <p *ngIf="message" class="status-message">{{ message }}</p>
+</div>
+</body>
+</html>
