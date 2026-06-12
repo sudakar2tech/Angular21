@@ -1,0 +1,54 @@
+.rating-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color:cornflowerblue;
+  padding: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.rating-card {
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 420px;
+  background-color: azure;
+}
+
+.rating-header h2 {
+  color: var(--text-main);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  padding-left: 120px;
+  
+}
+
+.rating-header p {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.star-rating-container {
+  display: inline-flex;
+  cursor: pointer;
+  font-size: 2rem;
+  user-select: none;
+}
+
+.star {
+  color: #ccc;
+  transition: color 0.15s ease-in-out, transform 0.1s ease;
+}
+
+.star.filled {
+  color: #ffcc00;
+}
+
+.star:hover {
+  transform: scale(1.2);
+}

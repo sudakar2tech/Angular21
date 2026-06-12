@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rating</title>
+  </head>
+  <body>
+    <div class="rating-wrapper">
+         <div class="rating-card">
+            <div class="rating-header"> <h2>Rating</h2></div>
+      <div class="star-rating-container" (mouseleave)="onStarLeave()">
+        <span
+          *ngFor="let star of starsArray"
+          class="star"
+          [class.filled]="hoveredStar() !== null ? star <= hoveredStar()! : star <= rating()"
+          (click)="onStarClick(star)"
+          (mouseover)="onStarHover(star)"
+        >
+          {{ (hoveredStar() !== null ? star <= hoveredStar()! : star <= rating()) ? '★' : '☆' }}
+        </span>
+      </div>
+
+      <div *ngIf="myscore <= 1 || myscore <= 3; then mainBlock; else fallbackBlock"></div>
+
+      <ng-template #mainBlock>Sadness: &#128546;</ng-template>
+      <ng-template #fallbackBlock>Happiness: &#128516;</ng-template>
+
+
+
+       <div class="star-rating-container" (mouseleave)="onStarLeave1()">
+        <span
+          *ngFor="let star of starsArray"
+          class="star"
+          [class.filled]="hoveredStar1() !== null ? star <= hoveredStar1()! : star <= rating()"
+          (click)="onStarClick1(star)"
+          (mouseover)="onStarHover1(star)"
+        >
+          {{ (hoveredStar1() !== null ? star <= hoveredStar1()! : star <= rating()) ? '★' : '☆' }}
+        </span>
+      </div>
+      
+
+    <div *ngIf="myscore1 <= 1 || myscore1 <= 3; then mainBlock; else fallbackBlock"></div>
+
+      <ng-template #mainBlock>Sadness: &#128546;</ng-template>
+      <ng-template #fallbackBlock>Happiness: &#128516;</ng-template>
+
+
+      <div class="form-group mb-3">
+      <label class="form-label">Description:</label>
+      <textarea ></textarea>
+      
+    </div>
+
+    <div class="form-group mb-3">
+      <input type="button" title="Submit" value="Submit" />
+    </div>
+    </div>
+    </div>
+  </body>
+</html>
