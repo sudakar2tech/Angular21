@@ -1,0 +1,40 @@
+.hero-banner {
+  background-image: url('/images/logo.png');
+  background-size: cover;
+}
+.list-container {
+  max-width: 400px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.list-header {
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.list-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.list-body {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #f9f9f9;
+}
+
+.list-item {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
