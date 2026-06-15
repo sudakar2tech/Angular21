@@ -8,5 +8,6 @@ import { appConfig } from './app/app.config';
 //import { Calculator } from './app/calculator/calculator';
 //import { Rating } from './app/rating/rating';
 //import { Gridarray } from './app/gridarray/gridarray';
-import { Gridremovearray } from './app/gridremovearray/gridremovearray';
-bootstrapApplication(Gridremovearray, appConfig).catch((err) => console.error(err));
+//import { Gridremovearray } from './app/gridremovearray/gridremovearray';
+import { Home } from './app/home/home';
+bootstrapApplication(Home, appConfig).catch((err) => console.error(err));

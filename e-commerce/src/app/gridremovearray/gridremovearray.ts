@@ -8,10 +8,12 @@ import { CommonModule } from '@angular/common';
   styleUrl: './gridremovearray.css',
 })
 export class Gridremovearray { // Source array list
+ imageUrl:string = 'https://fastly.picsum.photos/id/0/5000/3333.jpg?hmac=_j6ghY5fCfSD6tvtcV74zXivkJSPIfR9B8w34XeQmvU'; 
+  gridHeader:string = "Grid array remove";
   items = signal([
-    { id: 1, name: 'Item A' },
-    { id: 2, name: 'Item B' },
-    { id: 3, name: 'Item C' }
+    { id: 1, Firstname: 'Sudakar', Lastname: 's' },
+    { id: 2, Firstname: 'Angular' , Lastname: 'ts' },
+    { id: 3, Firstname: 'Jquery' , Lastname: 'script'}
   ]);
 
   removeSelected(selectedId: number): void {
@@ -19,5 +21,7 @@ export class Gridremovearray { // Source array list
     this.items.update(currentItems => 
       currentItems.filter(item => item.id !== selectedId)
     );
+     
+   
   }
 }

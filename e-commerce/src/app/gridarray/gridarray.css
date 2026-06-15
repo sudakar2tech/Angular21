@@ -1,6 +1,10 @@
-.hero-banner {
-  background-image: url('/images/logo.png');
-  background-size: cover;
+.gridarrray {
+  width: 320px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #333;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
 }
 .list-container {
   max-width: 400px;

@@ -30,3 +30,43 @@ button {
   border: none;
   font-size: 16px;
 }
+table, th, td {
+  border: 1px solid;
+}
+
+.grid-container {
+  max-width: 400px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.grid-header {
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.grid-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.grid-body {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #f9f9f9;
+}
+
+.grid-item {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.grid-item:last-child {
+  border-bottom: none;
+}

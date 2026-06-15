@@ -1,6 +1,35 @@
-@for (item of items(); track item.id) {
-      <div>
-        {{ item.name }} 
-        <button (click)="removeSelected(item.id)">Delete</button>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid-container">
+  <!-- Header Section -->
+  <div class="grid-header">
+    <h2>{{ gridHeader }}</h2>
+  </div>
+        <table>
+          <tr scope="row">
+            <td>Photo</td>
+            <td>Firstname</td>
+            <td>Lastname</td>
+            <td></td>
+          </tr> 
+    @for (item of items(); track item.id) {
+       
+      <tr scope="row">
+        <td> <img [src]="imageUrl" width ="100px" /></td>
+       <td>{{ item.Firstname }}</td>  
+       <td>{{ item.Lastname }}</td> 
+        <td><button  (click)="removeSelected(item.id)">Delete</button></td>
+    
+    </tr>
+
     }
+    </table>
+    </div>
+</body>
+</html>
