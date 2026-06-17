@@ -1,0 +1,59 @@
+
+  <nav class="navbar-row">
+    <h1 style="color: white;">Users Details</h1>
+  <ul class="nav-links">
+    <li><a href="Home">Home</a></li>
+    <li><a href="About">About</a></li>
+    <li><a routerLink ="./contact" [routerLinkActive]="['active-class', 'highlight-class']">contact</a></li>
+  </ul>
+</nav>
+
+<br/>
+<br/>
+<label>Search:</label>
+ <input 
+    type="text" 
+    placeholder="Search by name or price..." 
+    [value]="searchTerm()" 
+    (input)="onSearchChange($event)"
+    class="search-input"
+  />
+<br/><br/>
+<table class="html-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>    
+      <th>Price</th>
+      <th>Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (user of filteredUsers(); track user.id) {
+      <tr>
+        <td>{{ user.id }}</td>
+         <td>
+          @if (editingRowId === user.id) {
+            <input type="text" [(ngModel)]="user.name" />
+          } @else {
+            {{ user.name }}
+          }
+        </td>
+        <td>{{ user.price }}</td>
+        <td>{{ user.quantity }}</td>
+         @if (editingRowId === user.id) {
+            <button (click)="saveEdit(user)">Save</button>
+            <button (click)="cancelEdit(user)">Cancel</button>
+          } @else {
+            <button (click)="startEdit(user)">Edit</button>
+          }
+      </tr>
+    } @empty {
+      <tr>
+        <td colspan="4" style="text-align: center;">No users found.</td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+<router-outlet/>

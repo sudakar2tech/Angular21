@@ -1,0 +1,25 @@
+
+.navbar-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: rgb(243, 89, 18);
+ 
+
+}
+a {
+     color: white; /* Replaces default browser blue with orange-red */
+}
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin-left: auto; /* Pushes the ul and its children to the right */
+ 
+}
+
+table, th, td {
+  border: 1px solid;
+ 
+}

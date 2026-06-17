@@ -57,7 +57,7 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "options": { "port": 5000 },
+          "options": {"port": 5000 },
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
@@ -68,6 +68,7 @@
             }
           },
           "defaultConfiguration": "development"
+
         },
         "test": {
           "builder": "@angular/build:unit-test"

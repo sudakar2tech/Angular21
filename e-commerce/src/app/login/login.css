@@ -174,3 +174,77 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+/* login/login.component.css */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.login-card {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+}
+
+h2 {
+  margin: 0 0 0.5rem 0;
+  color: #333333;
+}
+
+.subtitle {
+  color: #666666;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  color: #4a5568;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  box-sizing: border-box;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+button:disabled {
+  background-color: #cbd5e0;
+  cursor: not-allowed;
+}

@@ -1,5 +1,15 @@
 <p>home works!</p>
 
+{{data | json }}
+
+<!-- {{employeelist}} -->
+ @for(emp of employeelist; track emp.id )
+{
+    {{emp.name}}
+   
+}
+
+
 <a routerLink="/about" [routerLinkActive]="['active-class', 'highlight-class']">about</a>
 <a routerLink ="/contact" [routerLinkActive]="['active-class', 'highlight-class']">contact</a>
 
